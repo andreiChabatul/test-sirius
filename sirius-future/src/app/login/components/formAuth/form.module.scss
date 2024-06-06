@@ -1,0 +1,8 @@
+.input {
+    @apply w-full border-2 border-solid border-[#ECECEC] bg-[#FFFFFF] rounded-lg h-9 p-3 mb-3 text-xs;
+}
+
+.inputContainer,
+.wrapper {
+    @apply w-full
+}
