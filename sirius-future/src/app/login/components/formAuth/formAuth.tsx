@@ -1,12 +1,15 @@
 'use client'
 
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { Visibility, VisibilityOff } from '@mui/icons-material';
 import styles from './form.module.scss';
 import { typeInputs } from '@/types/formAuth';
+import { useState } from 'react';
 
 export default function FormAuth() {
 
     const rexExpEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    const [visibility, setVisibility] = useState<boolean>(false);
 
     const {
         register,
@@ -16,11 +19,10 @@ export default function FormAuth() {
 
     const onSubmit: SubmitHandler<typeInputs> = (user) => { }
 
-
     return <form className={styles.wrapper} onSubmit={handleSubmit(onSubmit)}>
 
         <div className={styles.inputContainer}>
-            <input className={styles.input} {...register("email"    , { required: true, pattern: rexExpEmail })} placeholder='E-mail' />
+            <input className={styles.input} {...register("email", { required: true, pattern: rexExpEmail })} placeholder='E-mail' />
             <p className={styles.error}>
                 {(errors.email && errors.email.type === "required") && <span>Обязательное поле</span>}
                 {(errors.email && errors.email.type === "pattern") && <span>Недействительный адрес</span>}
@@ -28,18 +30,21 @@ export default function FormAuth() {
         </div>
 
         <div className={styles.inputContainer}>
-            <input type='password' className={styles.input} {...register("password", { required: true, minLength: 6 })} placeholder='Пароль' />
+            <input type={visibility ? 'text' : 'password'} className={styles.input} {...register("password", { required: true, minLength: 6 })} placeholder='Пароль' />
+            <div className={styles.password} onClick={() => setVisibility(!visibility)}>
+                {visibility
+                    ? <Visibility fontSize='small' color={visibility ? 'secondary' : 'disabled'} />
+                    : <VisibilityOff fontSize='small' color={visibility ? 'secondary' : 'disabled'} />}
+            </div>
             <p className={styles.error}>
                 {(errors.password && errors.password.type === "required") && <span>Обязательное поле</span>}
                 {(errors.password && errors.password.type === "minLength") && <span>Минимальная длина 6 символов</span>}
             </p>
         </div>
-
-        <div className={styles.buttonsContainer}>
-            {/* <Button type="submit">{NAME_FORM[type]}</Button> */}
-
+        <div className={styles.checkboxContainer}>
+            <input type='checkbox' id='save-me' />
+            <label className={styles.label} htmlFor="save-me">Запомнить меня</label>
         </div>
-
+        <button className={styles.button} type="submit">Войти</button>
     </form>
-
 }

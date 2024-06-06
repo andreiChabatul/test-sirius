@@ -1,3 +1,19 @@
 .wrapper {
     @apply w-[340px] m-auto flex flex-col items-center
 }
+
+.containerLinks {
+    @apply flex justify-between w-full mt-1 mb-[70px]
+}
+
+.containerRegister {
+    @apply flex flex-col items-center w-full gap-1;
+}
+
+.link {
+    @apply text-[#008AFF];
+}
+
+.title {
+    @apply text-[#323854] text-[40px] whitespace-nowrap mb-1;
+}

@@ -1,0 +1,15 @@
+.wrapper {
+    @apply w-[526px] h-[248px] bg-[#7362BC] rounded-[30px] overflow-hidden pt-14 pl-10 relative text-white;
+}
+
+.title {
+    @apply text-[32px] mb-3 w-[366px] leading-8;
+}
+
+.desc {
+    @apply font-light w-80 leading-5;
+}
+
+.image {
+    @apply absolute bottom-0 right-0
+}

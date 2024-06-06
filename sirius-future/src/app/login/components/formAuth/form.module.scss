@@ -1,8 +1,36 @@
 .input {
-    @apply w-full border-2 border-solid border-[#ECECEC] bg-[#FFFFFF] rounded-lg h-9 p-3 mb-3 text-xs;
+    @apply w-full border-2 border-solid border-[#ECECEC] bg-[#FFFFFF] rounded-lg h-9 p-3 text-xs;
 }
 
 .inputContainer,
 .wrapper {
-    @apply w-full
+    @apply w-full relative;
+}
+
+.inputContainer {
+    @apply mb-4
+}
+
+.password {
+    @apply absolute right-2 top-1 cursor-pointer duration-500;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.checkboxContainer {
+    @apply flex items-center gap-1 mb-10;
+}
+
+.label {
+    @apply text-xs text-gray-400
+}
+
+.button {
+    @apply w-full h-12 bg-[#8D7FC7] rounded-[30px] text-lg font-bold text-white mb-2;
+}
+
+.error {
+    @apply text-red-700 text-xs
 }

@@ -1,0 +1,19 @@
+.container {
+    @apply w-40 h-28 bg-[#D8ECFF] rounded-[20px] relative p-4;
+}
+
+.icon {
+    @apply absolute bottom-3 right-3;
+}
+
+.report {
+    @apply mb-6;
+}
+
+.teachers {
+    @apply bg-[#E8CBFF];
+}
+
+.desc {
+    @apply text-[#323854] text-xl leading-5;
+}

@@ -1,0 +1,15 @@
+.wrapper {
+    @apply w-48 h-32 bg-[#FDFDFF] mx-auto rounded-2xl relative overflow-hidden text-[#323854] pt-4 pl-4;
+}
+
+.gift {
+    @apply absolute bottom-0 right-0;
+}
+
+.desc {
+    @apply text-[10px] font-light w-36 leading-3 mb-2;
+}
+
+.button {
+    @apply w-16 h-8 bg-[#D8ECFF] rounded-2xl text-xs;
+}
