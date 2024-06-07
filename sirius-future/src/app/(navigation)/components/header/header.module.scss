@@ -1,0 +1,16 @@
+.wrapper {
+    @apply h-[68px] w-full border-[#F6F6FE] mb-5 border-b-2 rounded-b-3xl shadow-sm flex px-8 justify-between items-center;
+}
+
+
+.headerName {
+    @apply text-2xl leading-6;
+}
+
+.login {
+    @apply w-10 h-10 rounded-full border-2 border-[#7362BC] text-[#7362BC] flex items-center justify-center duration-300;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}

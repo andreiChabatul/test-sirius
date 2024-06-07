@@ -1,0 +1,11 @@
+.wrapper {
+    @apply flex gap-4 relative;
+}
+
+.container {
+    @apply h-10 w-10 rounded-full border-2 border-[#7362BC] flex items-center justify-center relative cursor-pointer;
+}
+
+.value {
+    @apply absolute h-4 w-4 rounded-full bg-[#E84849] flex justify-center items-center font-bold text-[10px] text-white bottom-6 left-6;
+}

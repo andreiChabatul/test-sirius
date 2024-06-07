@@ -1,4 +1,5 @@
 import Navigation from "./components/Navigation";
+import Header from "./components/header/Header";
 
 export default function NavagationLayout({
     children,
@@ -8,7 +9,11 @@ export default function NavagationLayout({
     return (
         <div className="flex">
             <Navigation />
-            {children}
+            <div>
+                <Header />
+                {children}
+            </div>
+
         </div>
     )
 }

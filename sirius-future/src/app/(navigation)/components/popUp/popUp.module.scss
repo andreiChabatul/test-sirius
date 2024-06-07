@@ -1,0 +1,19 @@
+.popUp {
+    @apply w-[250px] h-[262px] border-2 border-[#7362BC] rounded-xl relative bg-white z-10 text-[#7362BC] p-7;
+}
+
+.arrow {
+    @apply absolute top-[-20px] right-6
+}
+
+.close {
+    @apply absolute top-3 right-3 cursor-pointer;
+}
+
+.button {
+    @apply flex justify-between items-center text-[#008AFF] w-48 py-1 px-2 duration-300 rounded-md;
+
+    &:hover {
+        @apply bg-[#EEEEFF];
+    }
+}

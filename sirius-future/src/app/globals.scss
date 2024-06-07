@@ -24,3 +24,19 @@ body {
   background: #FDFDFF;
   color: #323854;
 }
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #EEEEFF;
+  border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #323854;
+}
