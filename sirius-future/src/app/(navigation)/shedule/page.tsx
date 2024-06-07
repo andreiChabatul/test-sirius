@@ -1,9 +1,7 @@
+import ShedulePage from "@/app/(ShedulePage)/ShedulePage";
 
-export default function ShedulePage() {
-    return (
-    <div>
-      ShedulePage
-    </div>
-    );
-  }
-  
+export default function ShedulePageNav() {
+  return (
+    <ShedulePage />
+  );
+}

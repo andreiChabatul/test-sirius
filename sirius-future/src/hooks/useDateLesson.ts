@@ -4,7 +4,7 @@ export function useDateLesson(date: string, duration: number) {
     const lessonStart = new Date(date);
     const lessonEnd = new Date(lessonStart.getTime() + duration);
     const day = lessonStart.getDate();
-    const timeLesson = `${lessonStart.getHours()}:${lessonStart.getMinutes()}-${lessonEnd.getHours()}:${lessonEnd.getMinutes()}`
+    const timeLesson = `${lessonStart.getHours().toString().padStart(2, '0')}:${lessonStart.getMinutes().toString().padStart(2, '0')}-${lessonEnd.getHours().toString().padStart(2, '0')}:${lessonEnd.getMinutes().toString().padStart(2, '0')}`
     const month = MONTH[lessonStart.getMonth()];
 
     return { day, month, timeLesson }

@@ -12,7 +12,7 @@
 }
 
 .password {
-    @apply absolute right-2 top-1 cursor-pointer duration-500;
+    @apply absolute right-2 top-2 cursor-pointer duration-500;
 
     &:hover {
         transform: scale(1.05);

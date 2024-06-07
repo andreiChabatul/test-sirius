@@ -1,7 +1,6 @@
 'use client'
 
 import { useForm, SubmitHandler } from 'react-hook-form';
-import { Visibility, VisibilityOff } from '@mui/icons-material';
 import styles from './form.module.scss';
 import { typeInputs } from '@/types/formAuth';
 import { useState } from 'react';
@@ -32,9 +31,9 @@ export default function FormAuth() {
         <div className={styles.inputContainer}>
             <input type={visibility ? 'text' : 'password'} className={styles.input} {...register("password", { required: true, minLength: 6 })} placeholder='Пароль' />
             <div className={styles.password} onClick={() => setVisibility(!visibility)}>
-                {visibility
-                    ? <Visibility fontSize='small' color={visibility ? 'secondary' : 'disabled'} />
-                    : <VisibilityOff fontSize='small' color={visibility ? 'secondary' : 'disabled'} />}
+                <span className="material-symbols-outlined" style={{ 'fontSize': '20px' }}>
+                    {visibility ? 'visibility' : 'visibility_off'}
+                </span>
             </div>
             <p className={styles.error}>
                 {(errors.password && errors.password.type === "required") && <span>Обязательное поле</span>}
