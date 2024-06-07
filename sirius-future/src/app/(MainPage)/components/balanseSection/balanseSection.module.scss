@@ -1,3 +1,15 @@
 .wrapper {
-    @apply w-[344px] h-[372px] border-2 rounded-[30px] border-[#7362BC];
+    @apply w-[344px] h-[372px] border-2 rounded-[30px] border-[#7362BC] p-6 pr-1;
+}
+
+.title {
+    @apply text-2xl mb-4;
+}
+
+.list {
+    @apply h-52 overflow-y-auto pr-5 mb-5;
+}
+
+.button {
+    @apply bg-[#DECFFF] w-[288px] h-10 rounded-[30px];
 }

@@ -1,0 +1,7 @@
+.wrapper {
+    @apply border-b-2 border-[#EEEEFF] py-[10px] flex items-center justify-between;
+}
+
+.value {
+    @apply w-10 h-10 bg-[#EEEEFF] rounded-full leading-6 text-xl flex items-center justify-center;
+}
