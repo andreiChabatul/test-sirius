@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.scss";
+import StoreProvider from "./StoreProvider";
+import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,14 +17,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-      </head>
-      <body>
-        <div className="pt-6 mx-auto max-w-[1340px]">{children}</div>
-      </body>
-    </html>
+    <StoreProvider>
+      <html lang="en">
+        <head>
+          <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        </head>
+        <body>
+          <div className="pt-6 mx-auto max-w-[1340px]">{children}
+            <Toaster richColors /></div>
+        </body>
+      </html>
+    </StoreProvider>
   );
 }
