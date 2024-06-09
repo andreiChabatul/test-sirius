@@ -4,11 +4,17 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import styles from './form.module.scss';
 import { typeInputs } from '@/types/formAuth';
 import { useState } from 'react';
+import { useAppDispatch } from '@/hooks/hookStore';
+import { fetchUser } from '@/lib/redux/reducers/user.reducer';
+import { useRouter } from 'next/navigation';
+
 
 export default function FormAuth() {
 
     const rexExpEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     const [visibility, setVisibility] = useState<boolean>(false);
+    const dispatch = useAppDispatch();
+    const router = useRouter();
 
     const {
         register,
@@ -16,7 +22,9 @@ export default function FormAuth() {
         formState: { errors },
     } = useForm<typeInputs>()
 
-    const onSubmit: SubmitHandler<typeInputs> = (user) => { }
+    const onSubmit: SubmitHandler<typeInputs> = (user) => {
+        dispatch(fetchUser(user.email)).then(() => router.push('./'));
+    }
 
     return <form className={styles.wrapper} onSubmit={handleSubmit(onSubmit)}>
 
