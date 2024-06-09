@@ -1,3 +1,23 @@
 .wrapper {
-    @apply w-[344px] h-[248px] bg-[#FFF1CB] rounded-[30px];
+    @apply w-[344px] h-[248px] bg-[#FFF1CB] rounded-[30px] py-8 flex flex-col items-center justify-between;
+}
+
+.title {
+    @apply text-xl leading-5 w-48 text-center;
+}
+
+.button {
+    @apply w-56 h-12 rounded-[30px] border-2 border-dashed border-[#323854]
+}
+
+.time {
+    @apply flex gap-3;
+}
+
+.timeTitle {
+    @apply text-4xl leading-9;
+}
+
+.timeValue {
+    @apply text-[15px] leading-5;
 }
