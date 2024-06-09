@@ -1,0 +1,7 @@
+.day {
+    @apply block w-[155px] text-right text-[#79747F] text-[15px] leading-5 pr-1;
+}
+
+.shedules {
+    @apply flex flex-wrap border-l-2 border-t-2 border-[#ECECEC] border-t-[#C8C5CD] w-[1087px];
+}

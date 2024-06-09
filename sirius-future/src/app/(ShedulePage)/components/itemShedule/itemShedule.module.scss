@@ -1,3 +1,7 @@
 .wrapper {
-    @apply inline-block w-[155px] h-[100px] border-b-2 border-r-2 border-[#ECECEC]
+    @apply inline-block w-[155px] h-[100px] border-b-2 border-r-2 border-[#ECECEC] p-1;
+}
+
+.title {
+    @apply text-xs leading-3 font-light text-right mb-1;
 }

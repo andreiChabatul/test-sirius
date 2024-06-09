@@ -1,3 +1,15 @@
 .shedules {
-    @apply flex flex-wrap border-l-2 border-t-2 border-[#ECECEC] border-t-[#C8C5CD] w-[1070px];
+    @apply flex items-center justify-center;
+}
+
+.head {
+    @apply flex justify-between items-center mb-10;
+}
+
+.button {
+    @apply border-[#8D7FC7] w-[85px] h-8 rounded-2xl border-2 text-xs leading-4 mr-4;
+}
+
+.buttonChange {
+    @apply w-[344px] h-10 bg-[#DECFFF] rounded-[30px];
 }

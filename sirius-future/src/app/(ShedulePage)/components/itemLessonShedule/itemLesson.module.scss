@@ -1,0 +1,23 @@
+.wrapper__active {
+    @apply w-[145px] h-9 rounded-sm mb-1 border-[1px] p-[1px] cursor-pointer duration-300 relative;
+
+    &:hover {
+        transform: scale(1.03)
+    }
+}
+
+.wrapper {
+    @apply h-8 rounded-sm mb-[2px] border-[1px] p-[2px];
+}
+
+.time {
+    @apply text-xs leading-4;
+}
+
+.name {
+    @apply text-[10px] leading-[8px]
+}
+
+.wallet {
+    @apply absolute top-1 right-1;
+}
