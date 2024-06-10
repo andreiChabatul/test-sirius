@@ -1,0 +1,11 @@
+.wrapper {
+    @apply flex gap-2 items-center;
+}
+
+.active {
+    @apply text-[#7362BC] text-2xl leading-5 pointer-events-none;
+}
+
+.disable {
+    @apply text-[#79747F] leading-5 cursor-pointer;
+}

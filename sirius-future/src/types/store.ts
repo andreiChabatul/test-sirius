@@ -2,6 +2,8 @@ import { IInfoLesson } from "./itemLesson";
 import { infoStat } from "./itemStat";
 import { shedule } from "./shedule";
 
+export type lang = 'RU' | 'EN';
+
 export type typeStoreShedule = {
     data: shedule[],
     loading: boolean
@@ -9,6 +11,7 @@ export type typeStoreShedule = {
 
 export type typeStoreApp = {
     modalUser: boolean,
+    lang: lang,
 }
 
 export interface IProfile {

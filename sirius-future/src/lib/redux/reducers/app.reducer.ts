@@ -1,8 +1,11 @@
-import {typeStoreApp } from '@/types/store';
-import { createSlice } from '@reduxjs/toolkit'
+import { lang, typeStoreApp } from '@/types/store';
+import { createSlice } from '@reduxjs/toolkit';
+import type { PayloadAction } from '@reduxjs/toolkit'
+import { toast } from 'sonner';
 
 const initialState: typeStoreApp = {
-    modalUser: false
+    modalUser: false,
+    lang: 'RU'
 };
 
 export const appReducer = createSlice({
@@ -14,10 +17,14 @@ export const appReducer = createSlice({
         },
         closeModalUser: (state) => {
             state.modalUser = false;
+        },
+        setLang: (state, action: PayloadAction<lang>) => {
+            state.lang = action.payload;
+            toast.info(`Язык изменен на ${action.payload}`);
         }
     },
 
 })
 
-export const { openModalUser, closeModalUser } = appReducer.actions;
+export const { openModalUser, closeModalUser, setLang } = appReducer.actions;
 export default appReducer.reducer;
