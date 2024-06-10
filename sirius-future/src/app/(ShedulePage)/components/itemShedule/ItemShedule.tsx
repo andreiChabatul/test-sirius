@@ -13,8 +13,8 @@ export default function ItemShedule({ date, lessons }: shedule) {
             <p className={styles.title}>{`${day} ${month}`}</p>
 
             <div>
-                {lessons?.map((lesson) =>
-                    <ItemLessonShedule {...lesson}/>)}
+                {lessons?.map((lesson, index) =>
+                    <ItemLessonShedule key={lesson.date + index} {...lesson}/>)}
             </div>
 
         </li>

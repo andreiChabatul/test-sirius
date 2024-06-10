@@ -39,18 +39,19 @@ export const shedules: shedule[] = [
     },
     { date: "March 2, 2024" },
     { date: "March 3, 2024" },
-    { date: "March 4, 2024",
-    lessons: [
-        {
-            name: 'Ментальная Арифметика',
-            teacher: 'Белкина Инна',
-            duration: 12300000,
-            date: "March 4, 2024 13:00:00",
-            paid: false,
-            stateLesson: 'available'
-        }
-    ]
-     },
+    {
+        date: "March 4, 2024",
+        lessons: [
+            {
+                name: 'Ментальная Арифметика',
+                teacher: 'Белкина Инна',
+                duration: 12300000,
+                date: "March 4, 2024 13:00:00",
+                paid: false,
+                stateLesson: 'available'
+            }
+        ]
+    },
     { date: "March 5, 2024" },
     { date: "March 6, 2024" },
     { date: "March 7, 2024" },
@@ -72,28 +73,49 @@ export const shedules: shedule[] = [
     { date: "March 11, 2024" },
     { date: "March 12, 2024" },
     { date: "March 13, 2024" },
-    { date: "March 14, 2024" },
+    {
+        date: "March 14, 2024",
+        lessons: [
+            {
+                name: 'Изучение Реакта',
+                teacher: 'Миронова Инна',
+                duration: 3500000,
+                date: "March 14, 2024 13:00:00",
+                paid: true,
+                stateLesson: 'done'
+            },
+            {
+                name: 'Ментальная Арифметика',
+                teacher: 'Белкина Инна',
+                duration: 300000,
+                date: "March 14, 2024 15:20:00",
+                paid: true,
+                stateLesson: 'available'
+            },
+        ]
+    },
     { date: "March 15, 2024" },
-    { date: "March 16, 2024",
-    lessons: [
-        {
-            name: 'Ментальная Арифметика',
-            teacher: 'Белкина Инна',
-            duration: 1000000,
-            date: "March 16, 2024 13:00:00",
-            paid: false,
-            stateLesson: 'done'
-        },
-        {
-            name: 'Ментальная Арифметика',
-            teacher: 'Белкина Инна',
-            duration: 2500000,
-            date: "March 16, 2024 17:00:00",
-            paid: true,
-            stateLesson: 'planned'
-        }
-    ]
-     },
+    {
+        date: "March 16, 2024",
+        lessons: [
+            {
+                name: 'Ментальная Арифметика',
+                teacher: 'Белкина Инна',
+                duration: 1000000,
+                date: "March 16, 2024 13:00:00",
+                paid: false,
+                stateLesson: 'done'
+            },
+            {
+                name: 'Ментальная Арифметика',
+                teacher: 'Белкина Инна',
+                duration: 2500000,
+                date: "March 16, 2024 17:00:00",
+                paid: true,
+                stateLesson: 'planned'
+            }
+        ]
+    },
     { date: "March 17, 2024" },
     { date: "March 18, 2024" },
     {

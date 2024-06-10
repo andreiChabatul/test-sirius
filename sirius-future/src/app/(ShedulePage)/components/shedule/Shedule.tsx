@@ -16,8 +16,8 @@ export default function Shedule() {
                     <span className={styles.day} key={day}>{day}</span>)}
             </div>
             <ul className={styles.shedules}>
-                {shedule.map((day) =>
-                    <ItemShedule key={day.date} {...day} />)}
+                {shedule.map((day, index) =>
+                    <ItemShedule key={day.date + index} {...day} />)}
             </ul>
         </div>
     )
