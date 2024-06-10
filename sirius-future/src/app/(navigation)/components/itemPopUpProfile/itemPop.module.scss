@@ -1,0 +1,27 @@
+.wrapper {
+    @apply flex gap-2 items-center text-[#323854] p-2;
+
+    &:last-child {
+        @apply border-[#EEEEFF] border-b-[1px] pb-3 mb-4;
+    }
+}
+
+.active {
+    @apply bg-[#EEEEFF] rounded-xl;
+}
+
+.title {
+    @apply text-xs leading-4;
+}
+
+.desc {
+    @apply flex flex-col gap-[2px];
+}
+
+.titleYou {
+    @apply text-[10px] leading-3;
+}
+
+.image {
+    @apply border-2 border-[#7362BC] rounded-full;
+}

@@ -1,9 +1,13 @@
 .popUp {
-    @apply w-[250px] h-[262px] border-2 border-[#7362BC] rounded-xl relative bg-white z-10 text-[#7362BC] p-7;
+    @apply w-[250px] border-2 border-[#7362BC] rounded-xl relative bg-white z-10 text-[#7362BC] p-7;
 }
 
 .arrow {
     @apply absolute top-[-20px] right-6
+}
+
+.title {
+    @apply leading-5 text-[#323854] mb-3;
 }
 
 .close {

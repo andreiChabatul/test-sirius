@@ -36,10 +36,13 @@ export default function PopUp() {
                     close
                 </span>
             </p>
-            <p>Смена пользователя</p>
+            <p className={styles.title}>Смена пользователя</p>
             <ul>
                 {[profile, ...anotherProfile].map((user) =>
-                    <ItemPopUpProfile key={user.name} {...{ name: user.name, image: user.image, isYou: true }} />)}
+                    <ItemPopUpProfile
+                        key={user.name}
+                        {...{ name: user.name, image: user.image, isYou: profile.name === user.name }}
+                    />)}
             </ul>
             <button className={styles.button} onClick={logout}>
                 <span>Выход</span>
