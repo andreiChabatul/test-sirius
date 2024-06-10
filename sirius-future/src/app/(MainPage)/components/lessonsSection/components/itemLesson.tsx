@@ -1,8 +1,8 @@
 import styles from './itemLesson.module.scss';
 import { useDateLesson } from "@/hooks/useDateLesson"
-import { infoLesson } from "@/types/itemLesson";
+import { IInfoLesson } from "@/types/itemLesson";
 
-export default function ItemLesson({ date, duration, name, teacher }: infoLesson) {
+export default function ItemLesson({ date, duration, name, teacher }: IInfoLesson) {
 
     const { timeLesson, day, month } = useDateLesson(date, duration);
 
